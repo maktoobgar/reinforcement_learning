@@ -1,7 +1,7 @@
 import numpy as np
 
 action_names = ["left", "stay", "right"]
-state_names = ["in charge", "s1", "s2", "s3", "garbage"]
+state_names = ["in charge", "s1", "s2", "s3", "s4", "garbage"]
 
 
 def r(battery, garbage) -> np.ndarray:
@@ -11,6 +11,7 @@ def r(battery, garbage) -> np.ndarray:
         [
             [0, battery_count, 0],
             [battery_count, 0, 0],
+            [0, 0, 0],
             [0, 0, 0],
             [0, 0, 0],
             [0, 0, garbage_count],
